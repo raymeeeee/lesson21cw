@@ -52,3 +52,27 @@ void Pharmacy::showInfo() const
 		}
 	}
 }
+
+void Pharmacy::findMedicine_title(const char* title)
+{
+	for (int i = 0; i < m_sizeMedicine; i++)
+	{
+		if (strcmp(title, m_arrMedicine[i].getTitle()) == 0) {
+			m_arrMedicine[i].showInfo();
+			return;
+		}
+	}	
+	cout << "Not found" << endl << endl;
+}
+
+void Pharmacy::sort_price()
+{
+	sort_if<Medicine>(m_arrMedicine, m_sizeMedicine,
+		[](Medicine left, Medicine right) {return left.getPrice() < right.getPrice(); });
+}
+
+void Pharmacy::sort_title()
+{
+	sort_if<Medicine>(m_arrMedicine, m_sizeMedicine,
+		[](Medicine left, Medicine right) {return strcmp(left.getTitle(), right.getTitle())	< 0; });
+}

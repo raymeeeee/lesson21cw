@@ -22,5 +22,9 @@ public:
 
 	void showInfo()const;
 
+	void findMedicine_title(const char* title);
+	void sort_price();
+	void sort_title();
+
 };
 
