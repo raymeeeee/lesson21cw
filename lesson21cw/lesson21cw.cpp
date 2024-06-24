@@ -22,4 +22,19 @@ int main()
 
 	pharm.showInfo();
 
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++" << endl << endl;
+
+	pharm.findMedicine_title("Nurofen");
+	pharm.findMedicine_title("Doctor mom");
+
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++" << endl << endl;
+
+	pharm.sort_price();
+	pharm.showInfo();
+
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++" << endl << endl;
+
+	pharm.sort_title();
+	pharm.showInfo();
+
 }

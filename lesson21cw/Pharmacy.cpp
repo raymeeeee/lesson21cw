@@ -74,5 +74,5 @@ void Pharmacy::sort_price()
 void Pharmacy::sort_title()
 {
 	sort_if<Medicine>(m_arrMedicine, m_sizeMedicine,
-		[](Medicine left, Medicine right) {return strcmp(left.getTitle(), right.getTitle())	< 0; });
+		[](Medicine left, Medicine right) {return strcmp(left.getTitle(), right.getTitle())	> 0; }); //from a-z
 }
