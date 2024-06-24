@@ -40,14 +40,14 @@ void Pharmacy::addMedicine(Medicine obj)
 
 void Pharmacy::showInfo() const
 {
-	cout << "Name: " << m_name << endl;
+	cout << "Name: " << m_name << endl << endl;
 	if (m_sizeMedicine == 0) {
 		cout << "Pharmacy has no medicine" << endl;
 	}
 	else {
 		for (int i = 0; i < m_sizeMedicine; i++)
 		{
-			cout << "#" << i + 1 << "Medicine" << endl;
+			cout << "\t#" << i + 1 << " Medicine" << endl;
 			m_arrMedicine[i].showInfo();
 		}
 	}
